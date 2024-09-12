@@ -85,13 +85,13 @@
             <mxPoint x="130" y="290" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="CniOOqTi2MUg2u5NT7FD-22" value="Standort" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="110" y="190" width="70" height="40" as="geometry" />
+        <mxCell id="CniOOqTi2MUg2u5NT7FD-24" value="Menge" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="328" width="70" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="CniOOqTi2MUg2u5NT7FD-23" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="CniOOqTi2MUg2u5NT7FD-1" target="CniOOqTi2MUg2u5NT7FD-22">
+        <mxCell id="CniOOqTi2MUg2u5NT7FD-25" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="CniOOqTi2MUg2u5NT7FD-2" target="CniOOqTi2MUg2u5NT7FD-24">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="260" as="sourcePoint" />
-            <mxPoint x="104" y="247" as="targetPoint" />
+            <mxPoint x="590" y="290" as="sourcePoint" />
+            <mxPoint x="650" y="304" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
