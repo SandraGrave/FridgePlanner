@@ -1,0 +1,46 @@
+CREATE DATABASE LF10_11;
+USE LF10_11;
+
+CREATE TABLE product (
+    productId INT AUTO_INCREMENT PRIMARY KEY, 
+    Deskription VARCHAR(50) NOT NULL, 
+    stockDate DATE NOT NULL, 
+    mhd DATE NOT NULL, 
+    price BIGINT NOT NULL, 
+    quantity INT NOT NULL
+);
+
+ALTER TABLE product AUTO_INCREMENT = 2001;
+
+CREATE TABLE fridge (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    location VARCHAR(50) NOT NULL
+);
+ALTER TABLE fridge AUTO_INCREMENT = 1000;
+
+-----INSERTS--------------
+
+INSERT INTO product (description, stockDate, mhd, price, quantity) VALUES
+('Milch', '2024-09-10', '2024-09-20', 150, 2),
+('Eier', '2024-09-11', '2024-10-05', 300, 12),
+('Butter', '2024-09-12', '2024-10-30', 200, 1),
+('Käse', '2024-09-08', '2024-10-15', 450, 1),
+('Joghurt', '2024-09-09', '2024-09-25', 99, 4),
+('Schinken', '2024-09-07', '2024-09-18', 250, 1),
+('Salami', '2024-09-07', '2024-09-25', 300, 1),
+('Salat', '2024-09-10', '2024-09-15', 100, 1),
+('Tomaten', '2024-09-10', '2024-09-15', 200, 5),
+('Gurke', '2024-09-12', '2024-09-18', 120, 1),
+('Karotten', '2024-09-10', '2024-09-25', 250, 10),
+('Hähnchenbrust', '2024-09-11', '2024-09-18', 700, 2),
+('Orangensaft', '2024-09-12', '2024-10-05', 300, 1),
+('Apfelsaft', '2024-09-10', '2024-10-10', 250, 1),
+('Marmelade', '2024-09-01', '2024-12-01', 400, 1),
+('Mayonnaise', '2024-09-05', '2024-12-30', 150, 1),
+('Ketchup', '2024-09-05', '2024-12-30', 180, 1),
+('Sauerrahm', '2024-09-11', '2024-09-25', 100, 2),
+('Hüttenkäse', '2024-09-10', '2024-09-20', 180, 1),
+('Räucherlachs', '2024-09-08', '2024-09-20', 850, 1);
+
+INSERT INTO fridge (Location) VALUES
+('Küche');
