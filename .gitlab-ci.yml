@@ -1,0 +1,44 @@
+image: maven:latest
+
+stages:
+  - build
+  - test
+  - checkstyle
+
+.some_script:
+  before_script:
+    - echo "Erstellt Datei"
+    - touch surefire-reports.xml
+
+.some_script2:
+  before_script:
+    - echo "Erstellt Datei"
+    - touch checkstyle-result.xml
+
+build:
+  stage: build
+  script:
+    - echo "Aufbau der Dockerumgebung"
+    - mvn compile
+
+test:
+  stage: test
+  extends: .some_script
+  script:
+    - mvn test -Dsurefire.reportFormat=xml --batch-mode -ntp > surefire-reports.xml
+  artifacts:
+    when: always
+    paths:
+      - surefire-reports.xml
+    expire_in: "30 days"
+
+checkstyle:
+  stage: checkstyle
+  extends: .some_script2
+  script:
+    - mvn checkstyle:checkstyle -Dcheckstyle.output.file=checkstyle-result.xml
+  artifacts:
+    paths:
+      - checkstyle-result.xml
+    expire_in: "1 week"
+  allow_failure: true
