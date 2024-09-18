@@ -22,7 +22,7 @@ public class ExpirationChecker {
     System.out.printf(productFormat, "ProductId", "description", "stockDate", "mhd", "price (ct)", "quantity" + nextLine);
 
     LocalDate alertDate = LocalDate.now().plusDays(2);
-    List<Product> myProductsList = productRepository.findByMhd(alertDate);
+    List<Product> myProductsList = productRepository.findByMhdLessThanEqual(alertDate);
 
     for (Product product : myProductsList) {
       System.out.printf(productFormat, product.getProductId(), product.getDescription(), product.getStockDate(), product.getMhd(),
