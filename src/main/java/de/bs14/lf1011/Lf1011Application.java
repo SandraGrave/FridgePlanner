@@ -20,8 +20,6 @@ public class Lf1011Application implements CommandLineRunner {
 
   @Override
   public void run(String... args) {
-    dataBaseUpdater.addNewProduct();
-    productReaderService.showMyProducts();
 
   }
 }
