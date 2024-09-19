@@ -25,7 +25,7 @@ public class ExpirationChecker {
       System.out.println("Diese Lebensmittel laufen bald ab!");
       printService.printProducts(myProductsList);
     }
-    
+
   }
 }
 
