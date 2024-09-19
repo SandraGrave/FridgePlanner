@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 public class PrintService {
 
   private final String productFormat = "%-9s | %-30s | %-20s | %-15s | %-10s | %-20s%n";
-  private final String nextLine = System.lineSeparator();
 
   public void printProducts(List<Product>productList){
     printHeadLineProduct();
@@ -20,7 +19,8 @@ public class PrintService {
   private void printHeadLineProduct(){
     System.out.printf(productFormat, "ID", "Produkt", "Datum Einlagerung", "Aufbrauchen zum", "Preis (ct)", "Menge");
   }
-  private void printProduct(Product product){
+
+  void printProduct(Product product){
       System.out.printf(productFormat, product.getProductId(), product.getDescription(), product.getStockDate(), product.getMhd(),
           product.getPrice(), product.getQuantity());
     }

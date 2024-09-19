@@ -18,6 +18,7 @@ public class ExpirationChecker {
     LocalDate alertDate = LocalDate.now().plusDays(2);
     List<Product> myProductsList = productRepository.findByMhdLessThanEqual(alertDate);
 
+    System.out.println("Folgende Produkte solltes du verbrauchen:");
     printService.printProducts(myProductsList);
   }
 }

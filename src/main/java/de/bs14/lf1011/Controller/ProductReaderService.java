@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class ProductReaderService {
-
   private final ProductRepository productRepository;
   private final PrintService printService;
+
   public void showMyProducts() {
 
     List<Product> myProductsList = productRepository.findAll();
