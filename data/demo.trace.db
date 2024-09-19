@@ -1,24 +1,24 @@
-2024-09-17 12:51:17.252166+02:00 jdbc[3]: exception
+2024-09-19 14:14:14.015414+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]
-2024-09-17 18:55:26.715991+02:00 jdbc[3]: exception
+2024-09-19 14:15:04.541521+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]
-2024-09-17 18:56:42.442401+02:00 jdbc[3]: exception
+2024-09-19 14:17:41.588353+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]
-2024-09-18 09:52:38.038013+02:00 jdbc[3]: exception
+2024-09-19 14:19:15.050237+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]
-2024-09-18 10:25:18.266381+02:00 jdbc[3]: exception
+2024-09-19 14:20:05.464210+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]
-2024-09-18 10:26:30.838213+02:00 jdbc[3]: exception
+2024-09-19 14:20:27.515352+02:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax Fehler in SQL Befehl "SELECT @[*]@character_set_database, @@sql_mode"; erwartet "identifier"
 Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
 SELECT @@character_set_database, @@sql_mode [42001-224]

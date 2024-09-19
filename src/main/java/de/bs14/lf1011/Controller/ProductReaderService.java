@@ -11,19 +11,12 @@ import org.springframework.stereotype.Service;
 public class ProductReaderService {
 
   private final ProductRepository productRepository;
-
+  private final PrintService printService;
   public void showMyProducts() {
-    String nextLine = System.lineSeparator();
-    String productFormat = "%-9s | %-30s | %-20s | %-15s | %-10s | %-20s%n";
-
-    System.out.printf(productFormat, "ProductId", "description", "stockDate", "mhd", "price (ct)", "quantity" + nextLine);
 
     List<Product> myProductsList = productRepository.findAll();
+    printService.printProducts(myProductsList);
 
-    for (Product product : myProductsList) {
-      System.out.printf(productFormat, product.getProductId(), product.getDescription(), product.getStockDate(), product.getMhd(),
-          product.getPrice(), product.getQuantity() + nextLine);
-    }
 
   }
 }

@@ -10,7 +10,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>de.bs14</groupId>
-  <artifactId>lf8</artifactId>
+  <artifactId>lf1011</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>lf10_11</name>
   <description>Mehr Übersicht für Deinen Kühlschrank!</description>
