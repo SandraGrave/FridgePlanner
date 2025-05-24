@@ -1,4 +1,4 @@
-package de.bs14.lf1011.Model;
+package de.bs14.FridgePlanner.Model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

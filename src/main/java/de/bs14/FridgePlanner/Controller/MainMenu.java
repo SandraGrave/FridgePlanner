@@ -1,4 +1,4 @@
-package de.bs14.lf1011.Controller;
+package de.bs14.FridgePlanner.Controller;
 
 import java.util.Scanner;
 

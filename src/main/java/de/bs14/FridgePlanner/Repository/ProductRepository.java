@@ -1,7 +1,7 @@
-package de.bs14.lf1011.Repository;
+package de.bs14.FridgePlanner.Repository;
 
-import de.bs14.lf1011.Model.Product;
-import jakarta.persistence.Id;
+import de.bs14.FridgePlanner.Model.Product;
+
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
