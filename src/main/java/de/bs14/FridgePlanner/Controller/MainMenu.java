@@ -2,6 +2,7 @@ package de.bs14.FridgePlanner.Controller;
 
 import java.util.Scanner;
 
+import de.bs14.FridgePlanner.Services.ProductReaderService;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;

@@ -31,18 +31,15 @@ public class Product {
   @Column
   private LocalDate mhd;
 
-  @Column
-  private Long price;
 
   @Column
   private int quantity;
 
 
-  public Product(String description, LocalDate stockDate, LocalDate mhd, Long price, int quantity){
+  public Product(String description, LocalDate stockDate, LocalDate mhd, int quantity){
     this.description = description;
     this.stockDate = stockDate;
     this.mhd = mhd;
-    this.price = price;
     this. quantity = quantity;
   }
 }

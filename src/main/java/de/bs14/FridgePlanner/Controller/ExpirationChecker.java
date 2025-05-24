@@ -3,6 +3,7 @@ package de.bs14.FridgePlanner.Controller;
 import java.time.LocalDate;
 import java.util.List;
 
+import de.bs14.FridgePlanner.Services.PrintService;
 import org.springframework.stereotype.Service;
 
 import de.bs14.FridgePlanner.Model.Product;

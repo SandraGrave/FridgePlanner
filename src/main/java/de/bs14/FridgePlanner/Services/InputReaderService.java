@@ -1,4 +1,4 @@
-package de.bs14.FridgePlanner.Controller;
+package de.bs14.FridgePlanner.Services;
 
 import java.util.Scanner;
 import lombok.RequiredArgsConstructor;
