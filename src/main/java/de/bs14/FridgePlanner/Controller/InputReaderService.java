@@ -1,4 +1,4 @@
-package de.bs14.lf1011.Controller;
+package de.bs14.FridgePlanner.Controller;
 
 import java.util.Scanner;
 import lombok.RequiredArgsConstructor;
@@ -11,9 +11,7 @@ public class InputReaderService {
     Scanner scanner = new Scanner(System.in);
     while (true) {
       if (scanner.hasNextLine()) {
-        String output = scanner.nextLine();
-        return output;
-
+        return scanner.nextLine();
       }
     }
   }

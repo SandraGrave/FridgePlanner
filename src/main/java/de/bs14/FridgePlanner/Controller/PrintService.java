@@ -1,6 +1,6 @@
-package de.bs14.lf1011.Controller;
+package de.bs14.FridgePlanner.Controller;
 
-import de.bs14.lf1011.Model.Product;
+import de.bs14.FridgePlanner.Model.Product;
 import java.util.List;
 import org.springframework.stereotype.Service;
 

@@ -1,12 +1,12 @@
-package de.bs14.lf1011.Controller;
+package de.bs14.FridgePlanner.Controller;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import de.bs14.lf1011.Model.Product;
-import de.bs14.lf1011.Repository.ProductRepository;
+import de.bs14.FridgePlanner.Model.Product;
+import de.bs14.FridgePlanner.Repository.ProductRepository;
 import jakarta.persistence.Column;
 import java.time.LocalDate;
 import java.util.Collections;

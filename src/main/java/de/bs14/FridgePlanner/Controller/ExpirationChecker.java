@@ -1,12 +1,12 @@
-package de.bs14.lf1011.Controller;
+package de.bs14.FridgePlanner.Controller;
 
 import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import de.bs14.lf1011.Model.Product;
-import de.bs14.lf1011.Repository.ProductRepository;
+import de.bs14.FridgePlanner.Model.Product;
+import de.bs14.FridgePlanner.Repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
