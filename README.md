@@ -13,3 +13,6 @@ Es soll außerdem benachrichtigen, welche Produkte demnächst ablaufen und entsp
 Stand bisher: BackendLogik soweit vorhanden und funktioniert.
 In Zukunft: Produkte sollen mit Handy eingescannt werden können (mit Lebenmittel-API möglich)
 Außerdem soll eine nutzerfreundliche Oberfläche implementiert werden.
+
+Zukunft:
+Aktuell arbeite ich weiterhin an diesem Projekt, um meine Frontend-Skills zu verbessern. 
