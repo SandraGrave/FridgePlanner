@@ -31,9 +31,11 @@ public class Product {
   @Column
   private LocalDate mhd;
 
-
   @Column
   private int quantity;
+
+  @Column
+  private String barcode;
 
 
   public Product(String description, LocalDate stockDate, LocalDate mhd, int quantity){
@@ -41,5 +43,13 @@ public class Product {
     this.stockDate = stockDate;
     this.mhd = mhd;
     this. quantity = quantity;
+  }
+
+  public Product(String description, LocalDate stockDate, LocalDate mhd, int quantity, String barcode){
+    this.description = description;
+    this.stockDate = stockDate;
+    this.mhd = mhd;
+    this.quantity = quantity;
+    this.barcode = barcode;
   }
 }

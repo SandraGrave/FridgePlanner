@@ -23,6 +23,7 @@ public class ProductService {
         Product productobj = new Product();
         System.out.print("Bitte Barcode scannen.");
         String barcode = inputReaderService.readInput();
+        productobj.setBarcode(barcode);
 
         try {
             JsonObject product = fetchProduct(barcode);

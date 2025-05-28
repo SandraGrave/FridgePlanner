@@ -23,7 +23,7 @@ public class MainMenu {
         while(x) {
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------------------------------");
-            System.out.printf(productFormat, "Menü", "Übersicht", "Hinzufügen", "Bearbeiten", "Beenden");
+            System.out.printf(productFormat, "Menü", "Übersicht", "Hinzufügen", "Entnahme", "Beenden");
             System.out.printf(productFormat, " ", "'m1'", "'m2'", "'m3'", "'exit'");
             System.out.println("-----------------------------------------------------------------------------------------------");
             System.out.println("Wähle einen Menüpunkt und bestätige mit Enter: ");

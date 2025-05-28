@@ -11,5 +11,5 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
   List<Product> findProductByProductId(int id);
   List<Product> findByDescription(String description);
   List<Product> findByMhdLessThanEqual(LocalDate mhd);
-
+  List<Product> findByBarcode(String barcode);
 }

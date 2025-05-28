@@ -22,10 +22,10 @@ public class DataBaseUpdater {
 
 
   public void updateQuantity() {
-    System.out.println("Von welchem Produkt möchtest du die Menge anpassen? Gib die Produktbezeichnung ein.");
-    String description = inputReaderService.readInput();
+    System.out.println("Von welchem Produkt möchtest du die Menge anpassen? Scanne den Barcode.");
+    String barcode = inputReaderService.readInput();
 
-    List<Product> myProductList = productRepository.findByDescription(description);
+    List<Product> myProductList = productRepository.findByBarcode(barcode);
 
     if (myProductList.size() > 1) {
       System.out.println("Du hast mehrere Produkte mit dieser Bezeichnung in deinem Kühlschrank.");
@@ -48,19 +48,20 @@ public class DataBaseUpdater {
 
 
   public void addNewProduct() {
+    Product scannedProduct = productService.scanProduct();
 
-    Product scannedproduct = productService.scanProduct();
-
-    String productDescription = scannedproduct.getDescription();
+    String productDescription = scannedProduct.getDescription();
 
     LocalDate stockDate = LocalDate.now();
 
-    LocalDate mhd = scannedproduct.getMhd();
+    LocalDate mhd = scannedProduct.getMhd();
 
     System.out.println("Gib hier die Menge an, die du eingelagert hast");
     int quantity = Integer.parseInt(inputReaderService.readInput());
 
-    Product product = new Product(productDescription, stockDate, mhd, quantity);
+    String barcode = scannedProduct.getBarcode();
+
+    Product product = new Product(productDescription, stockDate, mhd, quantity, barcode);
     productRepository.save(product);
 
     System.out.println("Dein Produkt wurde erfolgreich hinzugefügt.");
