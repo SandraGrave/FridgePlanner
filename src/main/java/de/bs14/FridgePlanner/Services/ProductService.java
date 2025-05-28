@@ -3,7 +3,7 @@ package de.bs14.FridgePlanner.Services;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import de.bs14.FridgePlanner.Controller.InputReaderService;
+import de.bs14.FridgePlanner.Model.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -11,30 +11,39 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.SQLOutput;
+import java.time.LocalDate;
 
 @Service
 @RequiredArgsConstructor
 public class ProductService {
     private final InputReaderService inputReaderService;
 
-    public void scanProduct() {
+    public Product scanProduct() {
+        Product productobj = new Product();
         System.out.print("Bitte Barcode scannen.");
         String barcode = inputReaderService.readInput();
+        productobj.setBarcode(barcode);
 
         try {
             JsonObject product = fetchProduct(barcode);
             if (product != null) {
-                String name = getAsString(product, "product_name", "Kein Name gefunden");
-                String mhd = getAsString(product, "expiration_date", "Kein MHD gefunden");
+                String name = getAsString(product, "product_name");
+                String mhd = getAsString(product, "expiration_date");
 
                 System.out.println("Produktname: " + name);
                 System.out.println("Mindesthaltbarkeitsdatum: " + mhd);
+
+                productobj.setDescription(name);
+                productobj.setMhd(LocalDate.parse(mhd));
+
             } else {
                 System.out.println("Produkt wurde nicht gefunden.");
             }
         } catch (Exception e) {
             System.out.println("Fehler beim Abrufen des Produkts: " + e.getMessage());
         }
+        return productobj;
     }
     private JsonObject fetchProduct(String barcode) throws Exception {
         String urlStr = "https://world.openfoodfacts.org/api/v0/product/" + barcode + ".json";
@@ -66,11 +75,12 @@ public class ProductService {
         }
     }
 
-    private String getAsString(JsonObject obj, String key, String defaultValue) {
+    private String getAsString(JsonObject obj, String key) {
         JsonElement el = obj.get(key);
         if (el != null && !el.isJsonNull()) {
             return el.getAsString();
         }
-        return defaultValue;
+        System.out.println(key + " wurde nicht gefunden, bitte manuell eingeben: (YYYY-MM-DD)");
+        return inputReaderService.readInput();
     }
 }

@@ -2,6 +2,7 @@ package de.bs14.FridgePlanner.Controller;
 
 import java.util.Scanner;
 
+import de.bs14.FridgePlanner.Services.ProductReaderService;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -22,7 +23,7 @@ public class MainMenu {
         while(x) {
             System.out.println("");
             System.out.println("-----------------------------------------------------------------------------------------------");
-            System.out.printf(productFormat, "Menü", "Übersicht", "Hinzufügen", "Bearbeiten", "Beenden");
+            System.out.printf(productFormat, "Menü", "Übersicht", "Hinzufügen", "Entnahme", "Beenden");
             System.out.printf(productFormat, " ", "'m1'", "'m2'", "'m3'", "'exit'");
             System.out.println("-----------------------------------------------------------------------------------------------");
             System.out.println("Wähle einen Menüpunkt und bestätige mit Enter: ");

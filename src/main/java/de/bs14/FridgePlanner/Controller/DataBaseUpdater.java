@@ -4,6 +4,10 @@ import de.bs14.FridgePlanner.Model.Product;
 import de.bs14.FridgePlanner.Repository.ProductRepository;
 import java.time.LocalDate;
 import java.util.List;
+
+import de.bs14.FridgePlanner.Services.InputReaderService;
+import de.bs14.FridgePlanner.Services.PrintService;
+import de.bs14.FridgePlanner.Services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,13 +18,14 @@ public class DataBaseUpdater {
   private final ProductRepository productRepository;
   private final InputReaderService inputReaderService;
   private final PrintService printService;
+  private final ProductService productService;
 
 
   public void updateQuantity() {
-    System.out.println("Von welchem Produkt möchtest du die Menge anpassen? Gib die Produktbezeichnung ein.");
-    String description = inputReaderService.readInput();
+    System.out.println("Von welchem Produkt möchtest du die Menge anpassen? Scanne den Barcode.");
+    String barcode = inputReaderService.readInput();
 
-    List<Product> myProductList = productRepository.findByDescription(description);
+    List<Product> myProductList = productRepository.findByBarcode(barcode);
 
     if (myProductList.size() > 1) {
       System.out.println("Du hast mehrere Produkte mit dieser Bezeichnung in deinem Kühlschrank.");
@@ -43,22 +48,20 @@ public class DataBaseUpdater {
 
 
   public void addNewProduct() {
-    System.out.println("Gib die Produktbezeichnung ein");
-    String productDescription = inputReaderService.readInput();
+    Product scannedProduct = productService.scanProduct();
 
-    System.out.println("Wann hast du das Produkt in den Kühlschrank gepackt (YYYY-MM-DD)");
-    LocalDate stockDate = LocalDate.parse(inputReaderService.readInput());
+    String productDescription = scannedProduct.getDescription();
 
-    System.out.println("Zu wann willst du das Produkt aufbrauchen, ggf. mhd? (YYYY-MM-DD)");
-    LocalDate mhd = LocalDate.parse(inputReaderService.readInput());
+    LocalDate stockDate = LocalDate.now();
 
-    System.out.println("ggf. hier den Preis eingeben (in cent)");
-    Long price = Long.valueOf(inputReaderService.readInput());
+    LocalDate mhd = scannedProduct.getMhd();
 
     System.out.println("Gib hier die Menge an, die du eingelagert hast");
     int quantity = Integer.parseInt(inputReaderService.readInput());
 
-    Product product = new Product(productDescription, stockDate, mhd, price, quantity);
+    String barcode = scannedProduct.getBarcode();
+
+    Product product = new Product(productDescription, stockDate, mhd, quantity, barcode);
     productRepository.save(product);
 
     System.out.println("Dein Produkt wurde erfolgreich hinzugefügt.");

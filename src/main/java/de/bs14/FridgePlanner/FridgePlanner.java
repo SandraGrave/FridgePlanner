@@ -9,7 +9,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import de.bs14.FridgePlanner.Controller.DataBaseUpdater;
 import de.bs14.FridgePlanner.Controller.ExpirationChecker;
 import de.bs14.FridgePlanner.Controller.MainMenu;
-import de.bs14.FridgePlanner.Controller.ProductReaderService;
+import de.bs14.FridgePlanner.Services.ProductReaderService;
 import lombok.RequiredArgsConstructor;
 
 
@@ -30,9 +30,11 @@ public class FridgePlanner implements CommandLineRunner {
 
   @Override
   public void run(String... args) {
-    expirationChecker.checkProducts();
+    //expirationChecker.checkProducts();
     mainMenu.showMainMenu();
-    productService.scanProduct();
+    //productService.scanProduct();
+    //dataBaseUpdater.addNewProduct();
+
 
   }
 }

@@ -1,4 +1,4 @@
-package de.bs14.FridgePlanner.Controller;
+package de.bs14.FridgePlanner.Services;
 
 import de.bs14.FridgePlanner.Model.Product;
 import de.bs14.FridgePlanner.Repository.ProductRepository;
