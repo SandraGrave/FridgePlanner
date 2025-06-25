@@ -1,6 +1,6 @@
 LF 10 - Kühlschrank-Übersicht
 
-Dieses Projekt wurde in einer 3er-Gruppe im Rahmen der Berufsschule umgesetzt. Aufgabe war es, ein Programm zu schreiben, das die man Nachhaltigkeit steigert und Umwelt entsprechend entlastet. Wir haben uns für die Lebensmittelverschwendung entschieden und uns gefragt, wie man diese verhindern oder zumindest verringern kann.
+Dieses Projekt wurde in einer 3er-Gruppe im Rahmen der Berufsschule umgesetzt. Aufgabe war es, ein Programm zu schreiben, das die Nachhaltigkeit steigert und man die Umwelt entsprechend entlastet. Wir haben uns für die Lebensmittelverschwendung entschieden und uns gefragt, wie man diese verhindern oder zumindest verringern kann.
 
 Idee:
 Dieses Projekt soll die Übersicht in Kühlschränken von Privathaushalten vereinfachen. 
